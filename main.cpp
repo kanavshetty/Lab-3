@@ -1,6 +1,8 @@
 #include "llh.h"
 using namespace std;
 
+void printMembers(llh name);
+
 int main() {
     int choice = 0;
     int littles = 0;
@@ -47,13 +49,21 @@ int main() {
         case 2:
             // player1 - player2
         case 3:
-            // player1 * player2
+            player1 * player2;
+            printMembers(player1);
         case 4:
             // player1 / player2
         case 5:
             // player1 == player2
         case 6:
             // end program
+            cout << "L bozo";
     }
 
+
+}
+
+void printMembers(llh name) {
+    cout << "Measurement Standards: " << name.getLittles() << " littles, " << name.getLots() << " lots, "
+    << name.getHeaps() << " heaps" << endl; 
 }

@@ -11,11 +11,11 @@ public:
     llh(int littles, int lots, int heaps);
     llh(int littles);
     void setLittles(int littles);
-    int getLittles();
+    const int getLittles();
     void setLots(int lots);
-    int getLots();
+    const int getLots();
     void setHeaps(int heaps);
-    int getHeaps();
+    const int getHeaps();
     llh operator+(const llh& obj);
     llh operator-(const llh& obj);
     llh operator*(const llh& obj);

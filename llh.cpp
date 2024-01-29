@@ -15,7 +15,7 @@ void llh::setLittles(int littles) {
     this->littles = littles;
 }
 
-int llh::getLittles() {
+const int llh::getLittles() {
     return littles;
 }
 
@@ -23,8 +23,16 @@ void llh::setLots(int lots) {
     this->lots = lots;
 }
 
-int llh::getLots() {
+const int llh::getLots() {
     return lots;
+}
+
+void llh::setHeaps(int heaps) {
+    this->heaps = heaps;
+}
+
+const int llh::getHeaps() {
+    return heaps;
 }
 
 void llh::simplify(){

@@ -3,6 +3,8 @@
 // Default constructor
 llh::llh() : littles(0), lots(0), heaps(0) {}
 
+// Overloaded constructor for all attributes
+llh::llh(int littles, int lots, int heaps) : littles(littles), lots(lots), heaps(heaps) {}
 
 // Overloaded constructor for "littles" attribute
 llh::llh(int littles) {
@@ -19,3 +21,18 @@ llh::llh(int littles) {
     }
 }
 
+void llh::setLittles(int littles) {
+    this->littles = littles;
+}
+
+int llh::getLittles() {
+    return littles;
+}
+
+
+void llh::setLots(int lots) {
+    this->lots = lots;
+}
+
+int llh::getLots() {
+    retur

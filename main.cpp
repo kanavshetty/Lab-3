@@ -18,6 +18,7 @@ int main() {
     cin >> lots;
     cout << endl << "Heaps: ";
     cin >> heaps;
+    llh test;
 
     llh player1(littles, lots, heaps);
 
@@ -45,14 +46,21 @@ int main() {
 
     switch(choice){
         case 1:
-            // player1 + player2
+            test = player1 + player2;
+            printMembers(test);
+            break;
         case 2:
-            // player1 - player2
+            test = player1 - player2;
+            printMembers(test);
+            break;
         case 3:
-            player1 * player2;
-            printMembers(player1);
+            test = player1 * player2;
+            printMembers(test);
+            break;
         case 4:
-            // player1 / player2
+            // test = player1 / player2;
+            // printMembers(test);
+            //break;
         case 5:
              if (player1 == player2){
                std::cout << "Objects 1 and 2 are equal" << endl;

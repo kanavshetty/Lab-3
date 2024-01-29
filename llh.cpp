@@ -82,3 +82,14 @@ bool llh::operator==(const llh& obj){
            (lots == obj.lots) &&
            (heaps == obj.heaps);
 }
+
+llh llh::operator*(const llh& obj) {
+    llh temp;
+    
+    temp.setLittles(littles * obj.littles);
+    temp.setLots(lots * obj.lots);
+    temp.setHeaps(heaps * obj.heaps);
+    temp.simplify();
+    return temp;
+}
+

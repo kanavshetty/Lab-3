@@ -48,32 +48,31 @@ void llh::simplify(){
         lots %= 7;
     }
 }
-llh operator+(const llh& obj){
+llh llh::operator+(const llh& obj){
     llh temp;
-    temp.setLittles(littles + obj.getLittles());
-    temp.setLots(lots + obj.getLots());
-    temp.setHeaps(heaps + obj.getHeaps());
+    temp.setLittles(this->littles + obj.littles);
+    temp.setLots(llh::lots + obj.lots);
+    temp.setHeaps(llh::heaps + obj.heaps);
     temp.simplify();
     return temp;
 };
 
-llh operator-(const llh& obj){
+llh llh::operator-(const llh& obj){
     llh temp;
-    temp.setLittles(littles - obj.getLittles());
-    temp.setLots(lots - obj.getLots());
-    temp.setHeaps(heaps - obj.getHeaps());
+    temp.setLittles(this->littles - obj.littles);
+    temp.setLots(this->lots - obj.lots);
+    temp.setHeaps(heaps - obj.heaps);
 
-    if(temp.getLittles()<0){
-        temp.setLots(temp.getLots() - ((temp.getLittles()) / 7) +1);
-        temp.setLittles(7 - abs(temp.getLittles()%7));
+    if(temp.littles<0){
+        temp.setLots(temp.lots - (temp.littles / 7) +1);
+        temp.setLittles(7 - abs(temp.littles%7));
     }
 
-    if(temp.getLots()<0){
-        temp.setHeaps(temp.getHeaps() - ((temp.getLots()) / 23) +1);
-        temp.setLots(23- abs(temp.getLittles()%23)) ;
+    if(temp.lots<0){
+        temp.setHeaps(temp.heaps - ((temp.lots) / 23) +1);
+        temp.setLots(23- abs(temp.littles%23)) ;
     }
 
     temp.simplify();
     return temp;
 };
-

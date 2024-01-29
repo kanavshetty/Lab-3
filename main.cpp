@@ -58,9 +58,9 @@ int main() {
             printMembers(test);
             break;
         case 4:
-            // test = player1 / player2;
-            // printMembers(test);
-            //break;
+            test = player1 / player2;
+            printMembers(test);
+            break;
         case 5:
              if (player1 == player2){
                std::cout << "Objects 1 and 2 are equal" << endl;
@@ -71,12 +71,10 @@ int main() {
                 break;
             }
         case 6:
-            // end program
+            return 1;
             cout << "L bozo";
     }
-
-
-
+    return 1;
 }
 
 void printMembers(llh name) {

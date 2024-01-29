@@ -92,4 +92,12 @@ llh llh::operator*(const llh& obj) {
     temp.simplify();
     return temp;
 }
+int const llh::convert_to_little(){
+    return 23*heaps + 7*lots + littles;
+}
 
+llh llh::operator/(const llh& obj){
+    int temp1 = this->convert_to_little();
+    int temp2 = obj.convert_to_little();
+    llh temp(temp1/temp2);
+};

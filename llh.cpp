@@ -29,10 +29,10 @@ int llh::getLittles() {
     return littles;
 }
 
-
 void llh::setLots(int lots) {
     this->lots = lots;
 }
 
 int llh::getLots() {
     return lots;
+}

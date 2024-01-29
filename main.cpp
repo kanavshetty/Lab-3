@@ -54,15 +54,14 @@ int main() {
         case 4:
             // player1 / player2
         case 5:
-             if (obj1 == obj2)
-            {
+             if (player1 == player2){
                std::cout << "Objects 1 and 2 are equal" << endl;
-               else
-               {
+               break;
+             }
+            else{
                 std::cout << "Objects 1 and 2 are not equal" << endl;
-               }
-               
-            
+                break;
+            }
         case 6:
             // end program
             cout << "L bozo";

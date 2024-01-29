@@ -77,7 +77,8 @@ llh llh::operator-(const llh& obj){
     return temp;
 };
 
-bool llh::operator==(const llh& obj) const {
+bool llh::operator==(const llh& obj){
     return (littles == obj.littles) &&
            (lots == obj.lots) &&
            (heaps == obj.heaps);
+}

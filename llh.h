@@ -22,4 +22,5 @@ public:
     llh operator/(const llh& obj);
     bool operator==(const llh& obj);
     void simplify();
+    int const convert_to_little();
 };

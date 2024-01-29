@@ -99,3 +99,8 @@ llh llh::operator/(const llh& obj){
     temp.simplify();
     return temp;
 };
+
+llh::operator std::string() const{
+    std::string s1 = "Littles: " + littles + "Lots: " + lots + "Heaps: " + heaps;
+    return s1;
+}

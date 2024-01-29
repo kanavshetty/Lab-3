@@ -1,34 +1,19 @@
+#pragma once
 #include<iostream>
-class LLH{
+class llh{
 private:
     int  littles = 0;
     int lots = 0;
     int heaps = 0;
 
 public:
-    LLH(){};
-    LLH(int littles, int lots, int heaps){
-        littles=littles;
-        lots= lots;
-        heaps = heaps;
-    }
-    LLH(int littles){
-        if(littles>7){
-            lots += littles/7;
-            littles %= 7;
-        }
-        littles += littles;
-        if(lots>23){
-            heaps += lots/7;
-            lots %= lots;
-        }
-        lots += lots;
-        heaps += heaps;
-    }
+    llh(){};
+    llh(int littles, int lots, int heaps){}
+    llh(int littles){}
     void setLittles(){};
-    int getLittles(){};
+    int getLittles(int littles){};
     void setLots(){};
-    int getLots(){};
+    int getLots(int lots){};
     void setHeaps(){};
-    int getHeaps(){};
+    int getHeaps(int heaps){};
 };

@@ -8,6 +8,11 @@ private:
 public:
     LLH(){};
     LLH(int littles, int lots, int heaps){
+        littles=littles;
+        lots= lots;
+        heaps = heaps;
+    }
+    LLH(int littles){
         if(littles>7){
             lots += littles/7;
             littles %= 7;

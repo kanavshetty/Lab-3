@@ -23,4 +23,5 @@ public:
     bool operator==(const llh& obj);
     void simplify();
     int convert_to_little() const;
+    operator std::string() const;
 };

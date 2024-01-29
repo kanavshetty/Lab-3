@@ -35,4 +35,4 @@ void llh::setLots(int lots) {
 }
 
 int llh::getLots() {
-    retur
+    return lots;

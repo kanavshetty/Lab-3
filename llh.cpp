@@ -44,8 +44,8 @@ void llh::simplify(){
     }
 
     if (lots > 23) {
-        heaps += lots / 7;
-        lots %= 7;
+        heaps += lots / 23;
+        lots %= 23;
     }
 }
 llh llh::operator+(const llh& obj){
@@ -84,20 +84,18 @@ bool llh::operator==(const llh& obj){
 }
 
 llh llh::operator*(const llh& obj) {
-    llh temp;
-    
-    temp.setLittles(littles * obj.littles);
-    temp.setLots(lots * obj.lots);
-    temp.setHeaps(heaps * obj.heaps);
+    llh temp(this->convert_to_little() * obj.convert_to_little());
     temp.simplify();
     return temp;
 }
-int const llh::convert_to_little(){
-    return 23*heaps + 7*lots + littles;
+int llh::convert_to_little() const{
+    return 7*(23*heaps + lots) + littles;
 }
 
 llh llh::operator/(const llh& obj){
     int temp1 = this->convert_to_little();
     int temp2 = obj.convert_to_little();
     llh temp(temp1/temp2);
+    temp.simplify();
+    return temp;
 };

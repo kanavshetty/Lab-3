@@ -25,4 +25,10 @@ public:
         lots += lots;
         heaps += heaps;
     }
+    void setLittles(){};
+    int getLittles(){};
+    void setLots(){};
+    int getLots(){};
+    void setHeaps(){};
+    int getHeaps(){};
 };

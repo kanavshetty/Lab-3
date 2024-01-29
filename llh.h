@@ -16,4 +16,10 @@ public:
     int getLots();
     void setHeaps(int heaps);
     int getHeaps();
+    llh operator+(const llh& obj){};
+    llh operator-(const llh& obj){};
+    llh operator*(const llh& obj){};
+    llh operator/(const llh& obj){};
+    bool operator==(const llh& obj){};
+    void simplify(){};
 };

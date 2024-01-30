@@ -5,6 +5,8 @@ private:
     int  littles = 0;
     int lots = 0;
     int heaps = 0;
+    void simplify(); //Private because only accessed by member functions
+    int convert_to_little() const; //Private because only accessed by member functions
 
 public:
     llh();
@@ -21,7 +23,5 @@ public:
     llh operator*(const llh& obj);
     llh operator/(const llh& obj);
     bool operator==(const llh& obj);
-    void simplify();
-    int convert_to_little() const;
     operator std::string() const;
 };

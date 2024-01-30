@@ -8,7 +8,8 @@ llh::llh(int littles, int lots, int heaps) : littles(littles), lots(lots), heaps
 
 // Overloaded constructor for "littles" attribute
 llh::llh(int littles) {
-    simplify();
+    this->littles = littles;
+    this->simplify();
 }
 
 void llh::setLittles(int littles) {
@@ -85,7 +86,6 @@ bool llh::operator==(const llh& obj){
 
 llh llh::operator*(const llh& obj) {
     llh temp(this->convert_to_little() * obj.convert_to_little());
-    temp.simplify();
     return temp;
 }
 int llh::convert_to_little() const{
@@ -95,12 +95,17 @@ int llh::convert_to_little() const{
 llh llh::operator/(const llh& obj){
     int temp1 = this->convert_to_little();
     int temp2 = obj.convert_to_little();
-    llh temp(temp1/temp2);
-    temp.simplify();
+    llh temp;
+    if (temp2 == 0) {
+        std::cout << "Error: Division by zero" << std::endl;
+    }
+    else {
+        temp.setLittles(temp1/temp2);
+        temp.simplify();
+    }
     return temp;
 };
 
 llh::operator std::string() const{
-    std::string s1 = "Littles: " + littles + "Lots: " + lots + "Heaps: " + heaps;
-    return s1;
+    return "Littles: " + std::to_string(littles) + ", Lots: " + std::to_string(lots) + ", Heaps: " + std::to_string(heaps);
 }

@@ -1,4 +1,7 @@
 #include "llh.h"
+
+//Authors - Gavin Gammoh, Kanav Shetty, Aaron Victor
+
 using namespace std;
 
 int main() {

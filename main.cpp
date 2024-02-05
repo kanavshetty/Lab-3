@@ -1,8 +1,6 @@
 #include "llh.h"
 using namespace std;
 
-void printMembers(llh name);
-
 int main() {
     int choice = 0;
     int littles = 0;
@@ -41,7 +39,8 @@ int main() {
             cout << "3. * operation" << endl;
             cout << "4. / operation" << endl;
             cout << "5. == operation" << endl;
-            cout << "6. EXIT PROGRAM" << endl;
+            cout << "6. String operation" << endl;
+            cout << "7. EXIT PROGRAM" << endl;
             cin >> choice;
             cout << endl;
         }
@@ -73,6 +72,9 @@ int main() {
                     break;
                 }
             case 6:
+                cout<< "The first object has: " << string(player1) << endl << "The second object has: " << string(player2)<<endl;
+                break;
+            case 7:
                 endProgram = true;
         }
         // endProgram = false;
